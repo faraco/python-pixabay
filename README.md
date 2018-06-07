@@ -4,9 +4,6 @@ Python 2 & 3 interface to Pixabay API.
 ### Install from PyPi 
 `pip install python-pixabay`
 
-### Online python-pixabay documentation
-https://faraco.github.io/python-pixabay/html/index.html
-
 ### Synopsis
 
 ```python
@@ -59,6 +56,10 @@ print(cvs)
 
 ### SEE ALSO
 [Pixabay API documentations](https://pixabay.com/api/docs)
+
+### LICENSE
+
+This module/interface licensed under MIT license. See LICENSE file for more details.
 
 ### AUTHOR
 faraco <skelic3@gmail.com>
