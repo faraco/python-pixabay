@@ -46,6 +46,10 @@ print(cvs)
 
 ```
 
+### How to actually use?
+
+I wrote a few _how to_ articles in the [project wiki](https://github.com/faraco/python-pixabay/wiki). Feel free to add more examples or scenarios to the wiki.
+
 ### Running the test
 
 > Make sure you set PIXABAY_KEY environment variable with your pixabay api key assigned before running the command below
@@ -59,7 +63,7 @@ print(cvs)
 
 ### LICENSE
 
-This module/interface licensed under MIT license. See LICENSE file for more details.
+This module is licensed under the MIT license. See LICENSE file for more details.
 
 ### AUTHOR
 faraco <skelic3@gmail.com>
