@@ -15,7 +15,7 @@ class pixabay_testcase(TestCase):
         self.assertIn("hits", video.search())
 
     def test_custom_image_search(self):
-        self.assertIn("hits", image.search(q="water"))
+        self.assertIn("hits", image.search(q="water", page=30))
 
     def test_custom_video_search(self):
         self.assertIn("hits", video.search(q="water"))

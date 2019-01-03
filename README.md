@@ -34,12 +34,10 @@ image.search(q='cats dogs',
 # *********
 # * Video *
 # *********
-
 video = Video(api_key)
 
 # default video search
 video.search()
-
 
 # custom video search
 video.search(q='cats', lang='fr',
