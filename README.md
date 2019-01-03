@@ -48,7 +48,7 @@ print(cvs)
 
 ### How to actually use?
 
-I wrote a few _how to_ articles in the [project wiki](https://github.com/faraco/python-pixabay/wiki). Feel free to add more examples or scenarios to the wiki.
+I wrote a few _how to_ articles in the [project wiki](https://github.com/momozor/python-pixabay/wiki). Feel free to add more examples or scenarios to the wiki.
 
 ### Running the test
 
@@ -66,4 +66,5 @@ I wrote a few _how to_ articles in the [project wiki](https://github.com/faraco/
 This module is licensed under the MIT license. See LICENSE file for more details.
 
 ### AUTHOR
-faraco <skelic3@gmail.com>
+
+* momozor <skelic3@gmail.com>
