@@ -1,20 +1,21 @@
 from unittest import TestCase
-from python_pixabay import Pixabay
-
+from pixabay import Image, Video
 import os
 
-pix = Pixabay(os.environ["PIXABAY_KEY"])
+api_key = os.environ["PIXABAY_KEY"]
+image = Image(api_key)
+video = Video(api_key)
 
-class python_pixabay_testcase(TestCase):
+
+class pixabay_testcase(TestCase):
     def test_image_search(self):
-        self.assertIn("hits", pix.image_search())
+        self.assertIn("hits", image.search())
 
     def test_video_search(self):
-        self.assertIn("hits", pix.video_search())
+        self.assertIn("hits", video.search())
 
     def test_custom_image_search(self):
-        self.assertIn("hits", pix.image_search(q="water"))
+        self.assertIn("hits", image.search(q="water"))
 
     def test_custom_video_search(self):
-        self.assertIn("hits", pix.video_search(q="water"))
-    
+        self.assertIn("hits", video.search(q="water"))
