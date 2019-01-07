@@ -1,5 +1,5 @@
 ### python-pixabay
-Python 2 & 3 Pixabay's API wrapper.
+Python 3 Pixabay's API wrapper.
 
 ### Install from PyPi
 `pip install python-pixabay`

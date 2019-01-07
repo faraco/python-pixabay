@@ -5,7 +5,7 @@ with open('README.md', 'r') as f:
 
 setup(
     name='python-pixabay',
-    description='Python 2 & 3 Pixabay\'s API wrapper',
+    description='Python 3 Pixabay\'s API wrapper',
     long_description=ld,
     long_description_content_type='text/markdown',
     url='https://github.com/momozor/python-pixabay',
