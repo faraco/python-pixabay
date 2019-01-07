@@ -9,18 +9,16 @@ Python 2 & 3 Pixabay's API wrapper.
 ```python
 from pixabay import Image, Video
 
-api_key = 'my_pixabay_api_key'
+API_KEY = 'my_pixabay_api_key'
 
-# ***************
-# * Image/Photo *
-# ***************
-image = Image(api_key)
+# image operations
+image = Image(API_KEY)
 
 # default image search
 image.search()
 
 # custom image search
-image.search(q='cats dogs',
+ims = image.search(q='cats dogs',
              lang='es',
              response_group='high_resolution',
              image_type='photo',
@@ -31,20 +29,22 @@ image.search(q='cats dogs',
              page=2,
              per_page=3)
 
-# *********
-# * Video *
-# *********
-video = Video(api_key)
+print(ims)
+
+# video operations
+video = Video(API_KEY)
 
 # default video search
 video.search()
 
 # custom video search
-video.search(q='cats', lang='fr',
+vis = video.search(q='cats', lang='fr',
                        video_type='animation',
                        category='animals',
                        page=1,
                        per_page=4)
+
+print(vis)
 ```
 
 ### How do I use it?
