@@ -21,17 +21,17 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
-import abc
+from abc import ABC, abstractmethod
 from requests import get
 
 
-class IPixabay(abc.ABC):
+class IPixabay(ABC):
     def __init__(self, api_key):
 
         self.api_key = api_key
         self.root_url = "https://pixabay.com/api/"
 
-    @abc.abstractmethod
+    @abstractmethod
     def search(self):
         pass
 
