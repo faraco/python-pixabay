@@ -53,7 +53,7 @@ I wrote a few _how to_ articles in the [project wiki](https://github.com/momozor
 
 ### Running the tests
 
-* Navigate to the ./test directory. Run the following command `pytest test_python_pixabay.py`
+* Run the following command `pytest`
 
 ### SEE ALSO
 [Pixabay API documentations](https://pixabay.com/api/docs)
