@@ -5,7 +5,7 @@ python:
     - "3.7-dev"
 
 install:
-    - pip install requests pytest black
+    - pip install requests pytest
 
 script:
-    - pytest
+    - pytest -v
