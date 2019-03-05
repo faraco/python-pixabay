@@ -51,13 +51,9 @@ print(vis)
 
 I wrote a few _how to_ articles in the [project wiki](https://github.com/momozor/python-pixabay/wiki). Feel free to add more examples or scenarios to the wiki.
 
-### Running the test
+### Running the tests
 
-> Make sure you set PIXABAY_KEY environment variable with your pixabay api key assigned before running the command below
-
-* Via Python unittest's discover: `python -m unittest discover test`
-
-* or via nose: `nosetests`
+* Navigate to the ./tests directory. Run the following command `pytest test_python_pixabay.py`
 
 ### SEE ALSO
 [Pixabay API documentations](https://pixabay.com/api/docs)
