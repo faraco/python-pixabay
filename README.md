@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/momozor/python-pixabay.svg?branch=master)](https://travis-ci.org/momozor/python-pixabay)
 ### python-pixabay
 Python 3 Pixabay's API wrapper.
 
