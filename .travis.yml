@@ -11,4 +11,4 @@ script:
     - pytest -v
 
 notifications:
-    never
+    email: false
