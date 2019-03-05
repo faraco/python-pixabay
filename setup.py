@@ -14,5 +14,5 @@ setup(
     version='2.0',
     license='MIT',
     py_modules=['pixabay'],
-    install_requires=['requests'],
+    install_requires=['requests', 'pytest', 'black'],
     keywords='api development pixabay wrapper python2 python3')

@@ -1,21 +1,29 @@
-from unittest import TestCase
-from pixabay import Image, Video
-import os
-
-api_key = os.environ["PIXABAY_KEY"]
-image = Image(api_key)
-video = Video(api_key)
+import pytest
+from .clones import Image, Video
 
 
-class pixabay_testcase(TestCase):
-    def test_image_search(self):
-        self.assertIn("hits", image.search())
+class TestPythonPixabay:
+    def test_image(self):
+        resp = Image("Blank").search()
+        assert resp["hits"]
 
-    def test_video_search(self):
-        self.assertIn("hits", video.search())
+    def test_video(self):
+        resp = Video("Blank").search()
+        assert resp["hits"]
 
-    def test_custom_image_search(self):
-        self.assertIn("hits", image.search(q="water", page=30))
+    # Or: Both work.
+    @pytest.fixture
+    def image_client(self):
+        return Image("Blank")
 
-    def test_custom_video_search(self):
-        self.assertIn("hits", video.search(q="water"))
+    @pytest.fixture
+    def video_client(self):
+        return Video("Blank")
+
+    def test_image(self, image_client):
+        resp = image_client.search()
+        assert resp["hits"]
+
+    def test_video(self, video_client):
+        resp = video_client.search()
+        assert resp["hits"]
