@@ -3,15 +3,6 @@ from .clones import Image, Video
 
 
 class TestPythonPixabay:
-    def test_image(self):
-        resp = Image("Blank").search()
-        assert resp["hits"]
-
-    def test_video(self):
-        resp = Video("Blank").search()
-        assert resp["hits"]
-
-    # Or: Both work.
     @pytest.fixture
     def image_client(self):
         return Image("Blank")
