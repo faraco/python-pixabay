@@ -9,7 +9,7 @@ video = Video(api_key)
 
 class TestPythonPixabay(TestCase):
     def test_image_search(self):
-        self.assertIn("hits", image.search())
+        self.assertEqual(image.search()["hits"], 500)
 
     def test_video_search(self):
         self.assertIn("hits", video.search())
