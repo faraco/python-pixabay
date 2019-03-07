@@ -5,12 +5,10 @@ python:
     - "3.7-dev"
 
 install:
-    - pip install pipenv
     - pipenv install --dev
-    - pipenv shell
 
 script:
-    - pytest -v
+    - pipenv run pytest
 
 notifications:
     email: false
