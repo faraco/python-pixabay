@@ -17,6 +17,7 @@ setup(
     license='MIT',
     py_modules=['pixabay'],
     install_requires=['slumber'],
+    python_requires='~=3.5',
     keywords='api development pixabay wrapper python3',
     classifiers=[
         'Programming Language :: Python :: 3.5',
