@@ -6,7 +6,6 @@ python:
 
 install:
     - pip install requests pytest slumber
-    - python3 setup.py install
 
 script:
     - pytest -v
