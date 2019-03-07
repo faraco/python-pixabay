@@ -54,15 +54,16 @@ I wrote a few _how to_ articles in the [project wiki](https://github.com/momozor
 
 ### Running the tests
 
-* Run the following command `pytest`
+* Run the following command `pytest` in project directory.
 
-### SEE ALSO
-[Pixabay API documentations](https://pixabay.com/api/docs)
+### See Also
+* [python-pixabay's Documentation](https://github.com/momozor/python-pixabay/index.html)
+* [Pixabay's API Documentation](https://pixabay.com/api/docs)
 
-### LICENSE
+### License
 
 This module is licensed under the MIT license. See LICENSE file for more details.
 
-### AUTHOR
+### Author
 
-* momozor <skelic3@gmail.com>
+* Momozor <skelic3@gmail.com>
