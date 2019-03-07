@@ -1,12 +1,14 @@
 from setuptools import setup
+from os import path
 
-with open('README.md', 'r') as fh:
-    ld = fh.read()
+this_dir = path.abspath(path.dirname(__file__))
+with open(path.join(this_dir, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name='python-pixabay',
     description='Python 3 Pixabay\'s API wrapper',
-    long_description=ld,
+    long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/momozor/python-pixabay',
     author='momozor',
