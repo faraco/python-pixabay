@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/momozor/python-pixabay.svg?branch=master)](https://travis-ci.org/momozor/python-pixabay)
 [![PyPI version](https://badge.fury.io/py/python-pixabay.svg)](https://badge.fury.io/py/python-pixabay)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-pixabay.svg?color=1&label=Python)]
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-pixabay.svg?color=1&label=Python)
 ### python-pixabay
 Python 3 Pixabay's API wrapper.
 
