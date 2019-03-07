@@ -39,6 +39,8 @@ class IPixabay(ABC):
 
 class Image(IPixabay):
     """This class handles all image operations
+
+    Handy
     """
     def search(
         self,
@@ -57,12 +59,18 @@ class Image(IPixabay):
         page=1,
         per_page=20,
         callback="",
-        pretty="false",
-    ):
-        """returns image data as dict
+        pretty="false"):
+            """returns image API data in dict
 
-            :param <q>: query search
-        """
+            Image search
+        
+            :param q: query to search
+
+            :Example:
+            >>> from pixabay import Image
+            >>> image = Image("api_key")
+            >>> image.search(q="apple", page=1)
+            """
 
         return self.api.api.get(
             key=self.api_key,
