@@ -17,4 +17,4 @@ class TestPythonPixabay:
 
     def test_video(self, video_client):
         resp = video_client.search()
-        assert resp["hits"]
+        assert resp["hits"]          

@@ -2,7 +2,6 @@
 
 from abc import ABC, abstractmethod
 
-
 class IPixabay(ABC):
     """Blank class representation of IPixabay."""
 

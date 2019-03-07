@@ -23,13 +23,14 @@ SOFTWARE.
 """
 from abc import ABC, abstractmethod
 from requests import get
+from slumber import API
 
 
 class IPixabay(ABC):
     def __init__(self, api_key):
 
         self.api_key = api_key
-        self.root_url = "https://pixabay.com/api/"
+        self.api = API("https://pixabay.com/")
 
     @abstractmethod
     def search(self):
@@ -56,32 +57,26 @@ class Image(IPixabay):
         callback="",
         pretty="false",
     ):
-        payload = {
-            "key": self.api_key,
-            "q": q,
-            "lang": lang,
-            "id": id,
-            "response_group": response_group,
-            "image_type": image_type,
-            "orientation": orientation,
-            "category": category,
-            "min_width": min_width,
-            "min_height": min_height,
-            "editors_choice": editors_choice,
-            "safesearch": safesearch,
-            "order": order,
-            "page": page,
-            "per_page": per_page,
-            "callback": callback,
-            "pretty": pretty,
-        }
 
-        resp = get(self.root_url, params=payload)
-
-        if resp.status_code == 200:
-            return resp.json()
-        else:
-            raise ValueError(resp.text)
+        return self.api.api.get(
+            key=self.api_key,
+            q=q,
+            lang=lang,
+            id=id,
+            response_group=response_group,
+            image_type=image_type,
+            orientation=orientation,
+            category=category,
+            min_width=min_width,
+            min_height=min_height,
+            editors_choice=editors_choice,
+            safesearch=safesearch,
+            order=order,
+            page=page,
+            per_page=per_page,
+            callback=callback,
+            pretty=pretty,
+        )
 
 
 class Video(IPixabay):
@@ -103,26 +98,20 @@ class Video(IPixabay):
         pretty="false",
     ):
 
-        payload = {
-            "key": self.api_key,
-            "q": q,
-            "lang": lang,
-            "id": id,
-            "video_type": video_type,
-            "category": category,
-            "min_width": min_width,
-            "min_height": min_height,
-            "editors_choice": editors_choice,
-            "safesearch": safesearch,
-            "order": order,
-            "page": page,
-            "per_page": per_page,
-            "callback": callback,
-            "pretty": pretty,
-        }
-
-        resp = get(self.root_url + "videos/", params=payload)
-        if resp.status_code == 200:
-            return resp.json()
-        else:
-            raise ValueError(resp.text)
+        return self.api.api.videos.get(
+            key=self.api_key,
+            q=q,
+            lang=lang,
+            id=id,
+            video_type=video_type,
+            category=category,
+            min_width=min_width,
+            min_height=min_height,
+            editors_choice=editors_choice,
+            safesearch=safesearch,
+            order=order,
+            page=page,
+            per_page=per_page,
+            callback=callback,
+            pretty=pretty,
+        )
