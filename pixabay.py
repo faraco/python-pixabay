@@ -59,10 +59,10 @@ class Image(IPixabay):
         callback="",
         pretty="false",
     ):
-    """returns image data as dict
+        """returns image data as dict
 
-        :param <q>: query search
-    """
+            :param <q>: query search
+        """
 
         return self.api.api.get(
             key=self.api_key,
