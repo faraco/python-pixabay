@@ -57,7 +57,7 @@ I wrote a few _how to_ articles in the [project wiki](https://github.com/momozor
 * Run the following command `pytest` in project directory.
 
 ### See Also
-* [python-pixabay's Documentation](https://github.com/momozor/python-pixabay/index.html)
+* [python-pixabay's Documentation](https://momozor.github.io/python-pixabay/index.html)
 * [Pixabay's API Documentation](https://pixabay.com/api/docs)
 
 ### License
