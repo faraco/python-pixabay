@@ -1,7 +1,7 @@
 from setuptools import setup
 
-with open('README.md', 'r') as f:
-    ld = f.read()
+with open('README.md', 'r') as fh:
+    ld = fh.read()
 
 setup(
     name='python-pixabay',
@@ -11,8 +11,13 @@ setup(
     url='https://github.com/momozor/python-pixabay',
     author='momozor',
     author_email='skelic3@gmail.com',
-    version='2.0',
+    version='2.1',
     license='MIT',
     py_modules=['pixabay'],
     install_requires=['slumber'],
-    keywords='api development pixabay wrapper python3')
+    keywords='api development pixabay wrapper python3',
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent'
+    ])
