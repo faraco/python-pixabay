@@ -61,7 +61,7 @@ registered Pixabay's api key.
 
 ### Changelog
 
-#### v2.7
+### v2.7
 
 * requires requests again in case it is not supported
 
