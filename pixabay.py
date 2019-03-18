@@ -99,14 +99,16 @@ class Image(IPixabay):
         Accepted values: "grayscale", "transparent", "red", "orange", "yellow",
         "green", "turquoise", "blue", "lilac", "pink", "white", "gray", "black", "brown"
 
-        :param editors_choice :type bool :desc Select images that have received 
+        :param editors_choice :type bool (python-pixabay use "true" and "false" string instead)
+        :desc Select images that have received 
         an Editor's Choice award. 
-        Accepted values: "true", "false" 
+        Accepted values: "true", "false"
         Default: "false"
 
-        :param safesearch :type bool :desc A flag indicating that only images suitable
+        :param safesearch :type bool (python-pixabay use "true" and "false" string instead)
+        :desc A flag indicating that only images suitable
         for all ages should be returned.
-        Accepted values: "true", "false" 
+        Accepted values: "true", "false"
         Default: "false"
 
         :param order :type str :desc How the results should be ordered. 
@@ -123,7 +125,8 @@ class Image(IPixabay):
 
         :param callback :type str :desc JSONP callback function name
 
-        :param pretty :type bool :desc Indent JSON output. This option should not
+        :param pretty :type bool (python-pixabay use "true" and "false" string instead)
+        :desc Indent JSON output. This option should not
         be used in production. 
         Accepted values: "true", "false" 
         Default: "false"
@@ -201,19 +204,16 @@ class Video(IPixabay):
         :param min_height :type int :desc Minimum image height
         Default: 0
 
-        :param colors :type str :desc A comma separated list of values may be used
-        to select multiple properties.
-        Accepted values: "grayscale", "transparent", "red", "orange", "yellow",
-        "green", "turquoise", "blue", "lilac", "pink", "white", "gray", "black", "brown"
-
-        :param editors_choice :type bool :desc Select images that have received 
+        :param editors_choice :type bool (python-pixabay use "true" and "false" string instead)
+        :desc Select images that have received 
         an Editor's Choice award. 
-        Accepted values: "true", "false" 
+        Accepted values: "true", "false"
         Default: "false"
 
-        :param safesearch :type bool :desc A flag indicating that only images suitable
+        :param safesearch :type bool (python-pixabay use "true" and "false" string instead)
+        :desc A flag indicating that only images suitable
         for all ages should be returned.
-        Accepted values: "true", "false" 
+        Accepted values: "true", "false"
         Default: "false"
 
         :param order :type str :desc How the results should be ordered. 
@@ -230,7 +230,8 @@ class Video(IPixabay):
 
         :param callback :type str :desc JSONP callback function name
 
-        :param pretty :type bool :desc Indent JSON output. This option should not
+        :param pretty :type bool (python-pixabay use "true" and "false" string instead)
+        :desc Indent JSON output. This option should not
         be used in production. 
         Accepted values: "true", "false" 
         Default: "false"
@@ -241,7 +242,6 @@ class Video(IPixabay):
         >>> video = Video("api_key")
         >>> video.search(q="apple", page=1)
         """
-
         return self.api.api.videos.get(
             key=self.api_key,
             q=q,
