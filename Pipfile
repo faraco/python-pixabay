@@ -7,7 +7,6 @@ verify_ssl = true
 pytest = "*"
 
 [packages]
-slumber = "*"
 
 [requires]
 python_version = "3.5"
