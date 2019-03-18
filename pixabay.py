@@ -1,7 +1,7 @@
 """
 MIT License
 
-Copyright (c) 2018-2019 momozor (Momo)
+Copyright (c) 2018-2019 Momozor
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,8 +27,11 @@ from slumber import API
 
 
 class IPixabay(ABC):
+    """Abstract class for Pixabay"""
     def __init__(self, api_key):
-
+        """
+        :param api_key :type str Pixabay's API key.
+        See https://pixabay.com/api/docs/ for more details."""
         self.api_key = api_key
         self.api = API("https://pixabay.com/")
 
@@ -38,14 +41,11 @@ class IPixabay(ABC):
 
 
 class Image(IPixabay):
-    """This class handles all image operations
-    """
+    """This class handles all image operations"""
     def search(
         self,
         q="yellow flower",
         lang="en",
-        id="",
-        response_group="image_details",
         image_type="all",
         orientation="all",
         category="",
@@ -62,9 +62,23 @@ class Image(IPixabay):
 
         Image search
         
-        :param q: query to search
+        :param q :type str :desc A URL encoded search term. If omitted,
+        all images are returned. This value may not exceed 100 characters.
+        Example: "yellow+flower"
 
-        :Example:
+        :param lang :type str :desc 	Language code of the language to be searched in. 
+        Accepted values: cs, da, de, en, es, fr, id, it, hu, nl, no, pl, pt, ro, sk, fi,
+        sv, tr, vi, th, bg, ru, el, ja, ko, zh
+        Default: "en"
+        For more info, see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+
+        :param image_type :type str :desc Filter results by image type.
+        Accepted values: "all", "photo", "illustration", "vector"
+        Default: "all"
+
+        :param orientation :type str :desc
+
+        Code Example
         >>> from pixabay import Image
         >>> image = Image("api_key")
         >>> image.search(q="apple", page=1)
@@ -73,8 +87,6 @@ class Image(IPixabay):
             key=self.api_key,
             q=q,
             lang=lang,
-            id=id,
-            response_group=response_group,
             image_type=image_type,
             orientation=orientation,
             category=category,
