@@ -55,7 +55,27 @@ I wrote a few _how to_ articles in the [project wiki](https://github.com/momozor
 
 ### Running the tests
 
+* Make sure you've assigned the `PIXABAY_API_KEY` environment variable with your
+registered Pixabay's api key.
 * Run the following command `pytest` in the project directory.
+
+### Changes
+
+#### v2.5
+
+* remove slumber to use custom payload
+* updated documentation to use just docstrings
+* updated README.md doc
+* make bool types to accept "true" or "false" to
+imitate the Pixabay's API argument type
+
+#### v2.4
+
+* use slumber
+* use default request module that was shipped with
+user's installed python installation
+* add more explicit metadatas to setup.py
+* add basic rst doc to pixabay.api
 
 ### See Also
 * [python-pixabay's Documentation](https://momozor.github.io/python-pixabay/index.html)
