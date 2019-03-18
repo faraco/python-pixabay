@@ -59,7 +59,7 @@ I wrote a few _how to_ articles in the [project wiki](https://github.com/momozor
 registered Pixabay's api key.
 * Run the following command `pytest` in the project directory.
 
-### Changes
+### Changelog
 
 #### v2.5
 
