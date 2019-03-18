@@ -51,6 +51,7 @@ class Image(IPixabay):
         category="",
         min_width=0,
         min_height=0,
+        colors="",
         editors_choice="false",
         safesearch="false",
         order="popular",
@@ -76,7 +77,55 @@ class Image(IPixabay):
         Accepted values: "all", "photo", "illustration", "vector"
         Default: "all"
 
-        :param orientation :type str :desc
+        :param orientation :type str :desc Whether an image is wider than it is tall,
+        or taller than it is wide.
+        Accepted values: "all", "horizontal", "vertical" 
+        Default: "all"
+
+        :param category :type str :desc Filter results by category. 
+        Accepted values: fashion, nature, backgrounds, science, education, people,
+        feelings, religion, health, places, animals, industry, food, computer, sports,
+        transportation, travel, buildings, business, music
+
+        :param min_width :type int :desc Minimum image width
+        Default: 0
+
+        :param min_height :type int :desc Minimum image height
+        Default: 0
+
+        :param colors :type str :desc A comma separated list of values may be used
+        to select multiple properties.
+        Accepted values: "grayscale", "transparent", "red", "orange", "yellow",
+        "green", "turquoise", "blue", "lilac", "pink", "white", "gray", "black", "brown"
+
+        :param editors_choice :type bool :desc Select images that have received 
+        an Editor's Choice award. 
+        Accepted values: "true", "false" 
+        Default: "false"
+
+        :param safesearch :type bool :desc A flag indicating that only images suitable
+        for all ages should be returned.
+        Accepted values: "true", "false" 
+        Default: "false"
+
+        :param order :type str :desc How the results should be ordered. 
+        Accepted values: "popular", "latest" 
+        Default: "popular"
+
+        :param page :type int :desc Returned search results are paginated.
+        Use this parameter to select the page number. 
+        Default: 1
+
+        :param per_pege :type int :desc Determine the number of results per page. 
+        Accepted values: 3 - 200 
+        Default: 20
+
+        :param callback :type str :desc JSONP callback function name
+
+        :param pretty :type bool :desc Indent JSON output. This option should not
+        be used in production. 
+        Accepted values: "true", "false" 
+        Default: "false"
 
         Code Example
         >>> from pixabay import Image
@@ -92,6 +141,7 @@ class Image(IPixabay):
             category=category,
             min_width=min_width,
             min_height=min_height,
+            colors=colors,
             editors_choice=editors_choice,
             safesearch=safesearch,
             order=order,
