@@ -23,7 +23,6 @@ image.search()
 # custom image search
 ims = image.search(q='cats dogs',
              lang='es',
-             response_group='high_resolution',
              image_type='photo',
              orientation='horizontal',
              category='animals',

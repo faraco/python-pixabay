@@ -23,7 +23,6 @@ SOFTWARE.
 """
 from abc import ABC, abstractmethod
 from requests import get
-from slumber import API
 
 
 class IPixabay(ABC):
@@ -33,7 +32,7 @@ class IPixabay(ABC):
         :param api_key :type str Pixabay's API key.
         See https://pixabay.com/api/docs/ for more details."""
         self.api_key = api_key
-        self.api = API("https://pixabay.com/")
+        self.root_url = "https://pixabay.com/api/"
 
     @abstractmethod
     def search(self):
@@ -137,24 +136,31 @@ class Image(IPixabay):
         >>> image = Image("api_key")
         >>> image.search(q="apple", page=1)
         """
-        return self.api.api.get(
-            key=self.api_key,
-            q=q,
-            lang=lang,
-            image_type=image_type,
-            orientation=orientation,
-            category=category,
-            min_width=min_width,
-            min_height=min_height,
-            colors=colors,
-            editors_choice=editors_choice,
-            safesearch=safesearch,
-            order=order,
-            page=page,
-            per_page=per_page,
-            callback=callback,
-            pretty=pretty,
-        )
+        payload = {
+            "key": self.api_key,
+            "q": q,
+            "lang": lang,
+            "image_type": image_type,
+            "orientation": orientation,
+            "category": category,
+            "min_width": min_width,
+            "min_height": min_height,
+            "colors": colors,
+            "editors_choice": editors_choice,
+            "safesearch": safesearch,
+            "order": order,
+            "page": page,
+            "per_page": per_page,
+            "callback": callback,
+            "pretty": pretty,
+        }
+
+        resp = get(self.root_url, params=payload)
+
+        if resp.status_code == 200:
+            return resp.json()
+        else:
+            raise ValueError(resp.text)
 
 
 class Video(IPixabay):
@@ -242,19 +248,25 @@ class Video(IPixabay):
         >>> video = Video("api_key")
         >>> video.search(q="apple", page=1)
         """
-        return self.api.api.videos.get(
-            key=self.api_key,
-            q=q,
-            lang=lang,
-            video_type=video_type,
-            category=category,
-            min_width=min_width,
-            min_height=min_height,
-            editors_choice=editors_choice,
-            safesearch=safesearch,
-            order=order,
-            page=page,
-            per_page=per_page,
-            callback=callback,
-            pretty=pretty,
-        )
+        payload = {
+            "key": self.api_key,
+            "q": q,
+            "lang": lang,
+            "video_type": video_type,
+            "category": category,
+            "min_width": min_width,
+            "min_height": min_height,
+            "editors_choice": editors_choice,
+            "safesearch": safesearch,
+            "order": order,
+            "page": page,
+            "per_page": per_page,
+            "callback": callback,
+            "pretty": pretty,
+        }
+
+        resp = get(self.root_url + "videos/", params=payload)
+        if resp.status_code == 200:
+            return resp.json()
+        else:
+            raise ValueError(resp.text)

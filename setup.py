@@ -16,7 +16,6 @@ setup(
     version='2.4',
     license='MIT',
     py_modules=['pixabay'],
-    install_requires=['slumber'],
     python_requires='~=3.5',
     keywords='api development pixabay wrapper python3',
     classifiers=[
