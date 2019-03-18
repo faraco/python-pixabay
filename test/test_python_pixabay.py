@@ -15,7 +15,7 @@ class TestPythonPixabay(TestCase):
         self.assertIn("hits", video.search())
 
     def test_custom_image_search(self):
-        self.assertIn("hits", image.search(q="water", page=1))
+        self.assertIn("hits", image.search(q="water", page=1, safesearch=True))
         self.assertEqual(image.search(q="apple", page=1)["hits"][0]["pageURL"],
          "https://pixabay.com/photos/apple-red-delicious-fruit-256261/")
 
