@@ -59,15 +59,16 @@ class Image(IPixabay):
         per_page=20,
         callback="",
         pretty="false"):
-        """returns image API data in dict
+        """returns Images API data in dict
 
-        Image search
+        Images search
         
         :param q :type str :desc A URL encoded search term. If omitted,
         all images are returned. This value may not exceed 100 characters.
         Example: "yellow+flower"
+        Default: "yellow+flower"
 
-        :param lang :type str :desc 	Language code of the language to be searched in. 
+        :param lang :type str :desc Language code of the language to be searched in. 
         Accepted values: cs, da, de, en, es, fr, id, it, hu, nl, no, pl, pt, ro, sk, fi,
         sv, tr, vi, th, bg, ru, el, ja, ko, zh
         Default: "en"
@@ -116,7 +117,7 @@ class Image(IPixabay):
         Use this parameter to select the page number. 
         Default: 1
 
-        :param per_pege :type int :desc Determine the number of results per page. 
+        :param per_page :type int :desc Determine the number of results per page. 
         Accepted values: 3 - 200 
         Default: 20
 
@@ -129,6 +130,7 @@ class Image(IPixabay):
 
         Code Example
         >>> from pixabay import Image
+        >>>
         >>> image = Image("api_key")
         >>> image.search(q="apple", page=1)
         """
@@ -157,7 +159,6 @@ class Video(IPixabay):
         self,
         q="yellow flower",
         lang="en",
-        id="",
         video_type="all",
         category="",
         min_width=0,
@@ -170,12 +171,81 @@ class Video(IPixabay):
         callback="",
         pretty="false",
     ):
+        """returns videos API data in dict
+
+        Videos search
+        
+        :param q :type str :desc A URL encoded search term. If omitted,
+        all images are returned. This value may not exceed 100 characters.
+        Example: "yellow+flower"
+        Default: "yellow+flower"
+
+        :param lang :type str :desc Language code of the language to be searched in. 
+        Accepted values: cs, da, de, en, es, fr, id, it, hu, nl, no, pl, pt, ro, sk, fi,
+        sv, tr, vi, th, bg, ru, el, ja, ko, zh
+        Default: "en"
+        For more info, see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+
+        :param video_type :type str :desc Filter results by video type.
+        Accepted values: "all", "film", "animation" 
+        Default: "all"
+
+        :param category :type str :desc Filter results by category. 
+        Accepted values: fashion, nature, backgrounds, science, education, people,
+        feelings, religion, health, places, animals, industry, food, computer, sports,
+        transportation, travel, buildings, business, music
+
+        :param min_width :type int :desc Minimum image width
+        Default: 0
+
+        :param min_height :type int :desc Minimum image height
+        Default: 0
+
+        :param colors :type str :desc A comma separated list of values may be used
+        to select multiple properties.
+        Accepted values: "grayscale", "transparent", "red", "orange", "yellow",
+        "green", "turquoise", "blue", "lilac", "pink", "white", "gray", "black", "brown"
+
+        :param editors_choice :type bool :desc Select images that have received 
+        an Editor's Choice award. 
+        Accepted values: "true", "false" 
+        Default: "false"
+
+        :param safesearch :type bool :desc A flag indicating that only images suitable
+        for all ages should be returned.
+        Accepted values: "true", "false" 
+        Default: "false"
+
+        :param order :type str :desc How the results should be ordered. 
+        Accepted values: "popular", "latest" 
+        Default: "popular"
+
+        :param page :type int :desc Returned search results are paginated.
+        Use this parameter to select the page number. 
+        Default: 1
+
+        :param per_page :type int :desc Determine the number of results per page. 
+        Accepted values: 3 - 200 
+        Default: 20
+
+        :param callback :type str :desc JSONP callback function name
+
+        :param pretty :type bool :desc Indent JSON output. This option should not
+        be used in production. 
+        Accepted values: "true", "false" 
+        Default: "false"
+
+        Code Example
+        >>> from pixabay import Video
+        >>>
+        >>> video = Video("api_key")
+        >>> video.search(q="apple", page=1)
+        """
 
         return self.api.api.videos.get(
             key=self.api_key,
             q=q,
             lang=lang,
-            id=id,
             video_type=video_type,
             category=category,
             min_width=min_width,
