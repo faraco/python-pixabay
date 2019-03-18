@@ -61,6 +61,10 @@ registered Pixabay's api key.
 
 ### Changelog
 
+### v2.6
+
+* remove old rst documentations
+
 #### v2.5
 
 * remove slumber to use custom payload
