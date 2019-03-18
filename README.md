@@ -61,7 +61,11 @@ registered Pixabay's api key.
 
 ### Changelog
 
-### v2.6
+#### v2.7
+
+* requires requests again in case it is not supported
+
+#### v2.6
 
 * remove old rst documentations
 
