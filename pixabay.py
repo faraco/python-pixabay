@@ -27,6 +27,7 @@ from requests import get
 
 class IPixabay(ABC):
     """Abstract class for Pixabay"""
+
     def __init__(self, api_key):
         """
         :param api_key :type str Pixabay's API key.
@@ -41,23 +42,23 @@ class IPixabay(ABC):
 
 class Image(IPixabay):
     """This class handles all image operations"""
-    def search(
-        self,
-        q="yellow flower",
-        lang="en",
-        image_type="all",
-        orientation="all",
-        category="",
-        min_width=0,
-        min_height=0,
-        colors="",
-        editors_choice="false",
-        safesearch="false",
-        order="popular",
-        page=1,
-        per_page=20,
-        callback="",
-        pretty="false"):
+
+    def search(self,
+               q="yellow flower",
+               lang="en",
+               image_type="all",
+               orientation="all",
+               category="",
+               min_width=0,
+               min_height=0,
+               colors="",
+               editors_choice="false",
+               safesearch="false",
+               order="popular",
+               page=1,
+               per_page=20,
+               callback="",
+               pretty="false"):
         """returns Images API data in dict
 
         Images search
@@ -165,20 +166,20 @@ class Image(IPixabay):
 
 class Video(IPixabay):
     def search(
-        self,
-        q="yellow flower",
-        lang="en",
-        video_type="all",
-        category="",
-        min_width=0,
-        min_height=0,
-        editors_choice="false",
-        safesearch="false",
-        order="popular",
-        page=1,
-        per_page=20,
-        callback="",
-        pretty="false",
+            self,
+            q="yellow flower",
+            lang="en",
+            video_type="all",
+            category="",
+            min_width=0,
+            min_height=0,
+            editors_choice="false",
+            safesearch="false",
+            order="popular",
+            page=1,
+            per_page=20,
+            callback="",
+            pretty="false",
     ):
         """returns videos API data in dict
 
