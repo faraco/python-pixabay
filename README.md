@@ -61,6 +61,12 @@ I wrote a few _how to_ articles in the [project wiki](https://github.com/momozor
 registered Pixabay's api key.
 * Run the following command `pytest` in the project directory.
 
+### Maintainer and Contributors
+
+* This software is authored and maintained by [Momozor](https://github.com/momozor).
+* For contributors that contributed to this development of this software, see the
+CONTRIBUTORS file.
+
 ### Changelog
 
 ### 3.0
