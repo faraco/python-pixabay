@@ -57,42 +57,45 @@ I wrote a few _how to_ articles in the [project wiki](https://github.com/momozor
 
 ### Running the tests
 
-* Make sure you've assigned the `PIXABAY_API_KEY` environment variable with your
+*   Make sure you've assigned the `PIXABAY_API_KEY` environment variable with your
 registered Pixabay's api key.
-* Run the following command `pytest` in the project directory.
+
+*   Run the following command `pytest` in the project directory.
 
 ### Maintainer and Contributors
 
-* This software is authored and maintained by [Momozor](https://github.com/momozor).
-* For contributors that contributed to this development of this software, see the
+*   This software is authored and maintained by [Momozor](https://github.com/momozor).
+
+*   For contributors that contributed to this development of this software, see the
 CONTRIBUTORS file.
 
 ### Changelog
 
 ### 3.0
 
-* update urllib3 in Pipfile.lock to fix vulnerability bug.
+*   update urllib3 in Pipfile.lock to fix vulnerability bug.
 
 ### 2.9
 
-* minor readme changes
+*   minor readme changes
 
 
 #### 2.8
 
-* minor doc changes
+*   minor doc changes
 
 #### v2.7
 
-* requires requests again in case it is not supported
+*   requires requests again in case it is not supported
 
 #### v2.6
 
-* remove old rst documentations
+*   remove old rst documentations
 
 ### See Also
-* [python-pixabay's Documentation](https://momozor.github.io/python-pixabay/index.html)
-* [Pixabay's API Documentation](https://pixabay.com/api/docs)
+*   [python-pixabay's Documentation](https://momozor.github.io/python-pixabay/index.html)
+
+*   [Pixabay's API Documentation](https://pixabay.com/api/docs)
 
 ### License
 
@@ -100,4 +103,4 @@ This module is licensed under the MIT license. See LICENSE file for more details
 
 ### Author
 
-* Momozor <skelic3@gmail.com>
+*   Momozor <skelic3@gmail.com>
