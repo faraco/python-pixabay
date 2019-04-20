@@ -51,7 +51,7 @@ vis = video.search(q='cats', lang='fr',
 print(vis)
 ```
 
-### How do I use it?
+### Usage
 
 I wrote a few _how to_ articles in the [project wiki](https://github.com/momozor/python-pixabay/wiki). Feel free to add more examples or scenarios to the wiki.
 
@@ -71,14 +71,13 @@ CONTRIBUTORS file.
 
 ### Changelog
 
-### 3.0
+#### 3.0
 
 *   update urllib3 in Pipfile.lock to fix vulnerability bug.
 
-### 2.9
+#### 2.9
 
 *   minor readme changes
-
 
 #### 2.8
 
@@ -99,7 +98,3 @@ CONTRIBUTORS file.
 ### License
 
 This module is licensed under the MIT license. See LICENSE file for more details.
-
-### Author
-
-*   Momozor <skelic3@gmail.com>
