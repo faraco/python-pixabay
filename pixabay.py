@@ -62,13 +62,13 @@ class Image(IPixabay):
         """returns Images API data in dict
 
         Images search
-        
+
         :param q :type str :desc A URL encoded search term. If omitted,
         all images are returned. This value may not exceed 100 characters.
         Example: "yellow+flower"
         Default: "yellow+flower"
 
-        :param lang :type str :desc Language code of the language to be searched in. 
+        :param lang :type str :desc Language code of the language to be searched in.
         Accepted values: cs, da, de, en, es, fr, id, it, hu, nl, no, pl, pt, ro, sk, fi,
         sv, tr, vi, th, bg, ru, el, ja, ko, zh
         Default: "en"
@@ -80,10 +80,10 @@ class Image(IPixabay):
 
         :param orientation :type str :desc Whether an image is wider than it is tall,
         or taller than it is wide.
-        Accepted values: "all", "horizontal", "vertical" 
+        Accepted values: "all", "horizontal", "vertical"
         Default: "all"
 
-        :param category :type str :desc Filter results by category. 
+        :param category :type str :desc Filter results by category.
         Accepted values: fashion, nature, backgrounds, science, education, people,
         feelings, religion, health, places, animals, industry, food, computer, sports,
         transportation, travel, buildings, business, music
@@ -100,8 +100,8 @@ class Image(IPixabay):
         "green", "turquoise", "blue", "lilac", "pink", "white", "gray", "black", "brown"
 
         :param editors_choice :type bool (python-pixabay use "true" and "false" string instead)
-        :desc Select images that have received 
-        an Editor's Choice award. 
+        :desc Select images that have received
+        an Editor's Choice award.
         Accepted values: "true", "false"
         Default: "false"
 
@@ -111,24 +111,24 @@ class Image(IPixabay):
         Accepted values: "true", "false"
         Default: "false"
 
-        :param order :type str :desc How the results should be ordered. 
-        Accepted values: "popular", "latest" 
+        :param order :type str :desc How the results should be ordered.
+        Accepted values: "popular", "latest"
         Default: "popular"
 
         :param page :type int :desc Returned search results are paginated.
-        Use this parameter to select the page number. 
+        Use this parameter to select the page number.
         Default: 1
 
-        :param per_page :type int :desc Determine the number of results per page. 
-        Accepted values: 3 - 200 
+        :param per_page :type int :desc Determine the number of results per page.
+        Accepted values: 3 - 200
         Default: 20
 
         :param callback :type str :desc JSONP callback function name
 
         :param pretty :type bool (python-pixabay use "true" and "false" string instead)
         :desc Indent JSON output. This option should not
-        be used in production. 
-        Accepted values: "true", "false" 
+        be used in production.
+        Accepted values: "true", "false"
         Default: "false"
 
         Code Example
@@ -184,23 +184,23 @@ class Video(IPixabay):
         """returns videos API data in dict
 
         Videos search
-        
+
         :param q :type str :desc A URL encoded search term. If omitted,
         all images are returned. This value may not exceed 100 characters.
         Example: "yellow+flower"
         Default: "yellow+flower"
 
-        :param lang :type str :desc Language code of the language to be searched in. 
+        :param lang :type str :desc Language code of the language to be searched in.
         Accepted values: cs, da, de, en, es, fr, id, it, hu, nl, no, pl, pt, ro, sk, fi,
         sv, tr, vi, th, bg, ru, el, ja, ko, zh
         Default: "en"
         For more info, see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
         :param video_type :type str :desc Filter results by video type.
-        Accepted values: "all", "film", "animation" 
+        Accepted values: "all", "film", "animation"
         Default: "all"
 
-        :param category :type str :desc Filter results by category. 
+        :param category :type str :desc Filter results by category.
         Accepted values: fashion, nature, backgrounds, science, education, people,
         feelings, religion, health, places, animals, industry, food, computer, sports,
         transportation, travel, buildings, business, music
@@ -212,8 +212,8 @@ class Video(IPixabay):
         Default: 0
 
         :param editors_choice :type bool (python-pixabay use "true" and "false" string instead)
-        :desc Select images that have received 
-        an Editor's Choice award. 
+        :desc Select images that have received
+        an Editor's Choice award.
         Accepted values: "true", "false"
         Default: "false"
 
@@ -223,24 +223,24 @@ class Video(IPixabay):
         Accepted values: "true", "false"
         Default: "false"
 
-        :param order :type str :desc How the results should be ordered. 
-        Accepted values: "popular", "latest" 
+        :param order :type str :desc How the results should be ordered.
+        Accepted values: "popular", "latest"
         Default: "popular"
 
         :param page :type int :desc Returned search results are paginated.
-        Use this parameter to select the page number. 
+        Use this parameter to select the page number.
         Default: 1
 
-        :param per_page :type int :desc Determine the number of results per page. 
-        Accepted values: 3 - 200 
+        :param per_page :type int :desc Determine the number of results per page.
+        Accepted values: 3 - 200
         Default: 20
 
         :param callback :type str :desc JSONP callback function name
 
         :param pretty :type bool (python-pixabay use "true" and "false" string instead)
         :desc Indent JSON output. This option should not
-        be used in production. 
-        Accepted values: "true", "false" 
+        be used in production.
+        Accepted values: "true", "false"
         Default: "false"
 
         Code Example
