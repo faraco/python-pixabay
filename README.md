@@ -94,7 +94,6 @@ CONTRIBUTORS file.
 
 ### See Also
 *   [python-pixabay's Documentation](https://momozor.github.io/python-pixabay/index.html)
-
 *   [Pixabay's API Documentation](https://pixabay.com/api/docs)
 
 ### License
