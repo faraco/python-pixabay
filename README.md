@@ -71,11 +71,11 @@ CONTRIBUTORS file.
 
 ### Changelog
 
-### 3.0
+#### 3.0
 
 *   update urllib3 in Pipfile.lock to fix vulnerability bug.
 
-### 2.9
+#### 2.9
 
 *   minor readme changes
 
@@ -98,7 +98,3 @@ CONTRIBUTORS file.
 ### License
 
 This module is licensed under the MIT license. See LICENSE file for more details.
-
-### Author
-
-*   Momozor [skelic3@gmail.com](mailto:skelic3@gmail.com)
