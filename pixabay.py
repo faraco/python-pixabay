@@ -1,5 +1,5 @@
 """
-Copyright (c) 2018-2019 Momozor
+Copyright (c) 2018-2019 Momozor and contributors
 """
 from abc import ABC, abstractmethod
 from requests import get
