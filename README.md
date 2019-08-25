@@ -71,6 +71,10 @@ CONTRIBUTORS file.
 
 ### Changelog
 
+#### 4.0
+
+* add version 1.4 API as backward compatibility feature.
+
 #### 3.0
 
 *   update urllib3 in Pipfile.lock to fix vulnerability bug.

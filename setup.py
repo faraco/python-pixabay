@@ -13,7 +13,7 @@ setup(
     url='https://github.com/momozor/python-pixabay',
     author='momozor',
     author_email='skelic3@gmail.com',
-    version='3.0',
+    version='4.0',
     license='MIT',
     py_modules=['pixabay'],
     install_requires=['requests'],
