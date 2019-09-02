@@ -287,7 +287,7 @@ class Pixabay:
                           page=page,
                           per_page=per_page,
                           callback=callback,
-                          pretty=false)
+                          pretty=pretty)
 
     def video_search(self,
                      q="yellow flower",
