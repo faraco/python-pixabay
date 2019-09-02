@@ -274,7 +274,7 @@ class Pixabay:
                      pretty="false"):
 
         self.image.search(q=q,
-                          lang=en,
+                          lang=lang,
                           image_type=image_type,
                           orientation=orientation,
                           category=category,
