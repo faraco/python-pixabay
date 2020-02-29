@@ -1,6 +1,4 @@
 [![Build Status](https://travis-ci.org/momozor/python-pixabay.svg?branch=master)](https://travis-ci.org/momozor/python-pixabay)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a6b8c0af5d064875a79b9fd30e89e003)](https://www.codacy.com/app/momozor/python-pixabay?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=momozor/python-pixabay&amp;utm_campaign=Badge_Grade)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/a6b8c0af5d064875a79b9fd30e89e003)](https://www.codacy.com/app/momozor/python-pixabay?utm_source=github.com&utm_medium=referral&utm_content=momozor/python-pixabay&utm_campaign=Badge_Coverage)
 [![Downloads](https://pepy.tech/badge/python-pixabay)](https://pepy.tech/project/python-pixabay)
 [![Downloads](https://pepy.tech/badge/python-pixabay/month)](https://pepy.tech/project/python-pixabay/month)
 [![PyPI version](https://badge.fury.io/py/python-pixabay.svg)](https://badge.fury.io/py/python-pixabay)
