@@ -1,5 +1,5 @@
 """
-Copyright (c) 2018-2019 Momozor and contributors
+Copyright (c) 2018-2020 Momozor and contributors
 """
 from abc import ABC, abstractmethod
 from requests import get
@@ -7,7 +7,6 @@ from requests import get
 
 class IPixabay(ABC):
     """Abstract class for Pixabay"""
-
     def __init__(self, api_key):
         """
         :param api_key :type str Pixabay's API key.
@@ -22,10 +21,10 @@ class IPixabay(ABC):
 
 class Image(IPixabay):
     """This class handles all image operations"""
-
     def search(self,
                q="yellow flower",
                lang="en",
+               id="",
                image_type="all",
                orientation="all",
                category="",
@@ -53,6 +52,9 @@ class Image(IPixabay):
         sv, tr, vi, th, bg, ru, el, ja, ko, zh
         Default: "en"
         For more info, see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+
+        :param id :type str :desc Retrieve individual images by ID.
+        Default: ""
 
         :param image_type :type str :desc Filter results by image type.
         Accepted values: "all", "photo", "illustration", "vector"
@@ -121,6 +123,7 @@ class Image(IPixabay):
             "key": self.api_key,
             "q": q,
             "lang": lang,
+            "id": id,
             "image_type": image_type,
             "orientation": orientation,
             "category": category,
@@ -148,6 +151,7 @@ class Video(IPixabay):
     def search(self,
                q="yellow flower",
                lang="en",
+               id="",
                video_type="all",
                category="",
                min_width=0,
@@ -173,6 +177,9 @@ class Video(IPixabay):
         sv, tr, vi, th, bg, ru, el, ja, ko, zh
         Default: "en"
         For more info, see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+
+        :param id :type str :desc Retrieve individual images by ID.
+        Default: ""
 
         :param video_type :type str :desc Filter results by video type.
         Accepted values: "all", "film", "animation"
@@ -231,6 +238,7 @@ class Video(IPixabay):
             "key": self.api_key,
             "q": q,
             "lang": lang,
+            "id": id,
             "video_type": video_type,
             "category": category,
             "min_width": min_width,
@@ -249,71 +257,3 @@ class Video(IPixabay):
             return resp.json()
         else:
             raise ValueError(resp.text)
-
-
-class Pixabay:
-    def __init__(self, api_key):
-        self.image = Image(api_key)
-        self.video = Video(api_key)
-
-    def image_search(self,
-                     q="yellow flower",
-                     lang="en",
-                     image_type="all",
-                     orientation="all",
-                     category="",
-                     min_width=0,
-                     min_height=0,
-                     colors="",
-                     editors_choice="false",
-                     safesearch="false",
-                     order="popular",
-                     page=1,
-                     per_page=20,
-                     callback="",
-                     pretty="false"):
-
-        self.image.search(q=q,
-                          lang=lang,
-                          image_type=image_type,
-                          orientation=orientation,
-                          category=category,
-                          min_width=min_width,
-                          min_height=min_height,
-                          colors=colors,
-                          editors_choice=editors_choice,
-                          safesearch=safesearch,
-                          order=order,
-                          page=page,
-                          per_page=per_page,
-                          callback=callback,
-                          pretty=pretty)
-
-    def video_search(self,
-                     q="yellow flower",
-                     lang="en",
-                     video_type="all",
-                     category="",
-                     min_width=0,
-                     min_height=0,
-                     editors_choice="false",
-                     safesearch="false",
-                     order="popular",
-                     page=1,
-                     per_page=20,
-                     callback="",
-                     pretty="false"):
-
-        self.video.search(q=q,
-                          lang=lang,
-                          video_type=video_type,
-                          category=category,
-                          min_width=min_width,
-                          min_height=min_height,
-                          editors_choice=editors_choice,
-                          safesearch=safesearch,
-                          order=order,
-                          page=page,
-                          per_page=per_page,
-                          callback=callback,
-                          pretty=pretty)
