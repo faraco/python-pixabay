@@ -1,4 +1,0 @@
-{
-  "test/test_python_pixabay.py::TestPythonPixabay::test_custom_old_image_search": true,
-  "test/test_python_pixabay.py::TestPythonPixabay::test_custom_old_video_search": true
-}
