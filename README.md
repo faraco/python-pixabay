@@ -68,7 +68,7 @@ registered Pixabay's api key.
 
 *   This software is authored and maintained by [Momozor](https://github.com/momozor).
 
-*   For contributors that contributed to this development of this software, see the
+*   For contributors that contributed to this development of this module, see the
 CONTRIBUTORS file.
 
 ### See Also
