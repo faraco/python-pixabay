@@ -5,12 +5,11 @@ verify_ssl = true
 
 [dev-packages]
 pytest = "*"
-coverage = "*"
-codacy-coverage = "*"
+behave = "*"
 yapf = "*"
 
 [packages]
 requests = "*"
 
 [requires]
-python_version = "3.5"
+python_version = "3.7"

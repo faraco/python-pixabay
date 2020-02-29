@@ -9,3 +9,5 @@ MANIFEST
 config.py
 .vscode/
 .coverage
+.idea/
+venv/

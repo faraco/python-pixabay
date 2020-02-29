@@ -71,32 +71,6 @@ registered Pixabay's api key.
 *   For contributors that contributed to this development of this software, see the
 CONTRIBUTORS file.
 
-### Changelog
-
-#### 4.0
-
-* add version 1.4 API as backward compatibility feature.
-
-#### 3.0
-
-*   update urllib3 in Pipfile.lock to fix vulnerability bug.
-
-#### 2.9
-
-*   minor readme changes
-
-#### 2.8
-
-*   minor doc changes
-
-#### v2.7
-
-*   requires requests again in case it is not supported
-
-#### v2.6
-
-*   remove old rst documentations
-
 ### See Also
 *   [python-pixabay's Documentation](https://momozor.github.io/python-pixabay/index.html)
 *   [Pixabay's API Documentation](https://pixabay.com/api/docs)
