@@ -1,4 +1,4 @@
-![build CI](https://github.com/momozor/python-pixabay/workflows/build%20CI/badge.svg)
+![build CI](https://github.com/momozor/python-pixabay/workflows/build%20CI/badge.svg?branch=master)
 [![Downloads](https://pepy.tech/badge/python-pixabay)](https://pepy.tech/project/python-pixabay)
 [![Downloads](https://pepy.tech/badge/python-pixabay/month)](https://pepy.tech/project/python-pixabay/month)
 [![PyPI version](https://badge.fury.io/py/python-pixabay.svg)](https://badge.fury.io/py/python-pixabay)
