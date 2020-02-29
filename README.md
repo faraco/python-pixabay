@@ -1,3 +1,4 @@
+![Main workflow](https://github.com/momozor/python-pixabay/workflows/Main%20workflow/badge.svg)
 [![Downloads](https://pepy.tech/badge/python-pixabay)](https://pepy.tech/project/python-pixabay)
 [![Downloads](https://pepy.tech/badge/python-pixabay/month)](https://pepy.tech/project/python-pixabay/month)
 [![PyPI version](https://badge.fury.io/py/python-pixabay.svg)](https://badge.fury.io/py/python-pixabay)
