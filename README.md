@@ -62,7 +62,7 @@ I wrote a few _how to_ articles in the [project wiki](https://github.com/momozor
 *   Make sure you've assigned the `PIXABAY_API_KEY` environment variable with your
 registered Pixabay's api key.
 
-*   Run the following command `pytest-3` in the project directory.
+*   Run the following command `pytest` in the project directory.
 
 ### Maintainer and Contributors
 
