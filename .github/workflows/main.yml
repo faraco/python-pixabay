@@ -20,4 +20,4 @@ jobs:
         pip install pytest behave yapf requests
     - name: Test with pytest
       run: |
-        PIXABAY_API_KEY=${{ secrets.PIXABAY_API_KEY }}pytest
+        PIXABAY_API_KEY=${{ secrets.PIXABAY_API_KEY }} pytest
