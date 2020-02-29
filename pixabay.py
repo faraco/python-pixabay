@@ -1,5 +1,8 @@
 """
 Copyright (c) 2018-2020 Momozor and contributors
+
+See LICENSE file that is distributed along with this
+project for further details.
 """
 from abc import ABC, abstractmethod
 from requests import get
