@@ -17,8 +17,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install
-        pipenv install --python ${{ matrix.python-version }}
+        pip install pytest behave yapf requests
     - name: Test with pytest
       run: |
-        pipenv --python ${{ matrix.python-version }} run pytest
+        pytest
