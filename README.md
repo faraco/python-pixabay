@@ -4,6 +4,7 @@
 [![PyPI version](https://badge.fury.io/py/python-pixabay.svg)](https://badge.fury.io/py/python-pixabay)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-pixabay.svg?color=1&label=Python)
 <img src="http://img.shields.io/liberapay/patrons/momozor.svg?logo=liberapay">
+<noscript><a href="https://liberapay.com/Momozor/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 ### python-pixabay
 Python 3 Pixabay's API wrapper.
 
