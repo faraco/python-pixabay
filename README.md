@@ -3,7 +3,6 @@
 [![Downloads](https://pepy.tech/badge/python-pixabay/month)](https://pepy.tech/project/python-pixabay/month)
 [![PyPI version](https://badge.fury.io/py/python-pixabay.svg)](https://badge.fury.io/py/python-pixabay)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-pixabay.svg?color=1&label=Python)
-<img src="http://img.shields.io/liberapay/patrons/momozor.svg?logo=liberapay">
 <a href="https://liberapay.com/momozor/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
 ### python-pixabay
 Python 3 Pixabay's API wrapper.
