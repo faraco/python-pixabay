@@ -1,0 +1,7 @@
+4.2 - 2020-03-07
+
+* added id key in the API
+* added a CHANGELOG file
+* removed old tests
+  - preparing to use behave and test mocking
+    to disable dependency on online data
