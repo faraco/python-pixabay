@@ -17,7 +17,7 @@ class TestPythonPixabay(TestCase):
                          editors_choice="true"))
         self.assertEqual(
             image.search(q="apple", page=1)["hits"][0]["pageURL"],
-            "https://pixabay.com/photos/apple-red-delicious-fruit-apple-256261/"
+            "https://pixabay.com/photos/apples-fruit-red-juicy-ripe-634572/"
         )
         self.assertEqual(
             image.search(q="apple",
