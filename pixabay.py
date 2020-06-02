@@ -6,28 +6,19 @@ project for further details.
 """
 from requests import get
 
-
 class Pixabay:
-    """Abstract class for Pixabay"""
     def __init__(self, api_key):
         """
         :param api_key :type str Pixabay's API key.
         See https://pixabay.com/api/docs/ for more details."""
         self.api_key = api_key
-        self.root_url = "https://pixabay.com/api/"
+        self.root_url = "https://pixabay.com/api"
 
     def as_yaml(self):
-        pass
-
-    def as_xml(self):
-        pass
-
-    def as_toml(self):
-        pass
+        p
 
 
 class Image(Pixabay):
-    """This class handles all image operations"""
     def search(self,
                q="yellow flower",
                lang="en",
@@ -45,7 +36,7 @@ class Image(Pixabay):
                per_page=20,
                callback="",
                pretty="false"):
-        """returns Images API data in dict
+        """returns Images API data as JSON
 
         Images search
 
@@ -170,7 +161,7 @@ class Video(Pixabay):
                per_page=20,
                callback="",
                pretty="false"):
-        """returns videos API data in dict
+        """returns videos API data as JSON
 
         Videos search
 
@@ -259,7 +250,7 @@ class Video(Pixabay):
             "pretty": pretty,
         }
 
-        response = get(self.root_url + "videos/", params=payload)
+        response = get(f"{self.root_url}/videos/", params=payload)
         if response.status_code == 200:
             return response.json()
         else:
