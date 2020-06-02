@@ -15,7 +15,7 @@ Python 3 Pixabay's API wrapper.
 ```python
 from pixabay import Image, Video
 
-API_KEY = 'my_pixabay_api_key'
+API_KEY = "my_pixabay_api_key"
 
 # image operations
 image = Image(API_KEY)
@@ -24,13 +24,13 @@ image = Image(API_KEY)
 image.search()
 
 # custom image search
-ims = image.search(q='cats dogs',
-             lang='es',
-             image_type='photo',
-             orientation='horizontal',
-             category='animals',
-             safesearch='true',
-             order='latest',
+ims = image.search(q="cats dogs",
+             lang="es",
+             image_type="photo",
+             orientation="horizontal",
+             category="animals",
+             safesearch="true",
+             order="latest",
              page=2,
              per_page=3)
 
@@ -43,11 +43,12 @@ video = Video(API_KEY)
 video.search()
 
 # custom video search
-vis = video.search(q='cats', lang='fr',
-                       video_type='animation',
-                       category='animals',
-                       page=1,
-                       per_page=4)
+vis = video.search(q="cats,
+                   lang="fr",
+                   video_type="animation",
+                   category="animals",
+                   page=1,
+                   per_page=4)
 
 print(vis)
 ```
