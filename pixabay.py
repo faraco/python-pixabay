@@ -4,11 +4,10 @@ Copyright (c) 2018-2020 Momozor and contributors
 See LICENSE file that is distributed along with this
 project for further details.
 """
-from abc import ABC, abstractmethod
 from requests import get
 
 
-class IPixabay(ABC):
+class Pixabay:
     """Abstract class for Pixabay"""
     def __init__(self, api_key):
         """
@@ -17,12 +16,17 @@ class IPixabay(ABC):
         self.api_key = api_key
         self.root_url = "https://pixabay.com/api/"
 
-    @abstractmethod
-    def search(self):
+    def as_yaml(self):
+        pass
+
+    def as_xml(self):
+        pass
+
+    def as_toml(self):
         pass
 
 
-class Image(IPixabay):
+class Image(Pixabay):
     """This class handles all image operations"""
     def search(self,
                q="yellow flower",
@@ -142,15 +146,15 @@ class Image(IPixabay):
             "pretty": pretty,
         }
 
-        resp = get(self.root_url, params=payload)
+        response = get(self.root_url, params=payload)
 
-        if resp.status_code == 200:
-            return resp.json()
+        if response.status_code == 200:
+            return response.json()
         else:
-            raise ValueError(resp.text)
+            raise ValueError(response.text)
 
 
-class Video(IPixabay):
+class Video(Pixabay):
     def search(self,
                q="yellow flower",
                lang="en",
@@ -255,8 +259,9 @@ class Video(IPixabay):
             "pretty": pretty,
         }
 
-        resp = get(self.root_url + "videos/", params=payload)
-        if resp.status_code == 200:
-            return resp.json()
+        response = get(self.root_url + "videos/", params=payload)
+        if response.status_code == 200:
+            return response.json()
         else:
-            raise ValueError(resp.text)
+            raise ValueError(response.text)
+
