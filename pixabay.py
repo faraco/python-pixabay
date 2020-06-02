@@ -5,6 +5,8 @@ See LICENSE file that is distributed along with this
 project for further details.
 """
 from requests import get
+from json import decoder
+from yaml import dump
 
 class Pixabay:
     def __init__(self, api_key):
@@ -13,6 +15,9 @@ class Pixabay:
         See https://pixabay.com/api/docs/ for more details."""
         self.api_key = api_key
         self.root_url = "https://pixabay.com/api"
+
+    def search(self):
+        pass
 
 
 class Image(Pixabay):

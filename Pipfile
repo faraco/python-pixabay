@@ -9,6 +9,7 @@ yapf = "*"
 
 [packages]
 requests = "*"
+pyyaml = "*"
 
 [requires]
 python_version = "3.8"

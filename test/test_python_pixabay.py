@@ -23,7 +23,7 @@ class TestPythonPixabay(TestCase):
             image.search(q="apple",
                          page=1,
                          safesearch="false",
-                         editors_choice="true")["totalHits"], 155)
+                         editors_choice="true")["totalHits"], 157)
 
     def test_custom_video_search(self):
         self.assertEqual(
