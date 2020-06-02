@@ -14,9 +14,6 @@ class Pixabay:
         self.api_key = api_key
         self.root_url = "https://pixabay.com/api"
 
-    def as_yaml(self):
-        p
-
 
 class Image(Pixabay):
     def search(self,
