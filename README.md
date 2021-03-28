@@ -4,6 +4,11 @@
 [![PyPI version](https://badge.fury.io/py/python-pixabay.svg)](https://badge.fury.io/py/python-pixabay)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/python-pixabay.svg?color=1&label=Python)
 
+## This repository has been archived.
+
+This project is not maintained anymore. Don't hesitate to fork this project and continue with your improvements.
+Thank you.
+
 ### python-pixabay
 Python 3 Pixabay's API wrapper.
 
